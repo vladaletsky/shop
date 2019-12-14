@@ -1,7 +1,9 @@
 package com.wladyslaw.shop.controller;
 
+import com.wladyslaw.shop.accessingdatamysql.UserRepository;
 import com.wladyslaw.shop.model.First;
 import com.wladyslaw.shop.service.FirstI;
+import org.apache.tomcat.jni.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +12,8 @@ public class IndexController {
 
     @Autowired
     private FirstI firstService;
+
+
 
 
     @GetMapping("/search")
@@ -27,7 +31,5 @@ public class IndexController {
     public String delete() {
         return "delete";
     }
-
-
 
 }
